@@ -1,0 +1,52 @@
+@import '../../../App.scss';
+
+.nav-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    height: 96px;
+    padding: 0 15px;
+    background-color: #fff;
+    transition: left .25s;
+
+    .nav-top {
+        display: flex;
+        align-items: center;
+
+        a {
+            line-height: 90px;
+            width: 280px;
+            text-align: left;
+            padding-left: 10px;
+            display: flex;
+            align-items: center;
+            margin-bottom: 0;
+            white-space: nowrap;
+            text-decoration: none;
+            outline: 0;
+
+            .logo-text {
+                line-height: 90px;
+                transition: all .4s ease;
+                font-weight: 600;
+                font-size: 32px;
+            }
+        }
+
+        .header-btn {
+            line-height: 0 !important;
+            width: auto !important;
+            border-radius: 30px;
+            font-weight: 500;
+            padding: 30px !important;
+        }
+
+        #register-btn {
+            background-color: $primary-color;
+        }
+    }
+}

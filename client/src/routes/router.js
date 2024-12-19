@@ -6,9 +6,9 @@ import MainLayout from '../layouts/MainLayout';
 import AuthLayout from '../layouts/AuthLayout';
 
 // Pages
-import HomePage from '../pages/home/HomePage';
-import LoginPage from '../pages/login/LoginPage';
-import RegisterPage from '../pages/register/RegisterPage';
+import HomePage from '../pages/HomePage';
+import LoginPage from '../pages/LoginPage';
+import RegisterPage from '../pages/RegisterPage';
 
 const Router = () => {
     return (
