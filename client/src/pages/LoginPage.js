@@ -38,7 +38,7 @@ const LoginPage = () => {
                     <div class="register-link">
                         <p>
                             Dont have account
-                            <a className='ms-3' href="#">
+                            <a className='ms-3' href="register">
                                 Register
                             </a>
                         </p>

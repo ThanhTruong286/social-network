@@ -9,6 +9,7 @@ import AuthLayout from '../layouts/AuthLayout';
 import HomePage from '../pages/HomePage';
 import LoginPage from '../pages/LoginPage';
 import RegisterPage from '../pages/RegisterPage';
+import ForgotPasswordPage from '../pages/ForgotPasswordPage';
 
 const Router = () => {
     return (
@@ -37,6 +38,14 @@ const Router = () => {
                 element={
                     <AuthLayout>
                         <RegisterPage />
+                    </AuthLayout>
+                }
+            />
+            <Route
+                path="/forgot-password"
+                element={
+                    <AuthLayout>
+                        <ForgotPasswordPage />
                     </AuthLayout>
                 }
             />

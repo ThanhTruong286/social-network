@@ -1,30 +1,24 @@
 import React from 'react';
-import "../assets/scss/pages/RegisterPage.scss";
+import "../assets/scss/pages/ForgotPasswordPage.scss";
 import "../App.scss";
 
-const RegisterPage = () => {
+const ForgotPasswordPage = () => {
     return (
-        <div class="register-container">
+        <div class="forgot-password-container">
             <div class="left-section">
                 <img alt="Illustration of two people shaking hands in an office setting" height="600" src="https://storage.googleapis.com/a1aa/image/pEm4BkfuqIQjPKt5FdfxBhh8D4BrtiouO8ThIX8puZDae04nA.jpg" width="600" />
             </div>
             <div class="right-section">
-                <div class="register-form">
+                <div class="forgot-password-form">
                     <h2>
-                        Create your account
+                        Change your password
                     </h2>
                     <form>
                         <div class="mb-3">
-                            <input class="form-control" id="name" placeholder="Your Name" type="text" />
+                            <input class="form-control" id="oldPassword" placeholder="Old Password" type="password" />
                         </div>
                         <div class="mb-3">
-                            <input class="form-control" id="email" placeholder="Your Email Address" type="email" />
-                        </div>
-                        <div class="mb-3">
-                            <input class="form-control" id="password" placeholder="Password" type="password" />
-                        </div>
-                        <div class="mb-3">
-                            <input class="form-control" id="confirmPassword" placeholder="Confirm Password" type="password" />
+                            <input class="form-control" id="newPassword" placeholder="New Password" type="password" />
                         </div>
 
                         <div class="mb-3 form-check">
@@ -35,7 +29,7 @@ const RegisterPage = () => {
                         </div>
 
                         <button class="btn btn-primary w-100" type="submit">
-                            Register
+                            Change Password
                         </button>
                     </form>
                     <div class="register-link">
@@ -66,4 +60,4 @@ const RegisterPage = () => {
     );
 };
 
-export default RegisterPage;
+export default ForgotPasswordPage;
