@@ -1,0 +1,105 @@
+@import '../../../App.scss';
+
+.scroll-bar {
+    margin-left: 0;
+    overflow-y: scroll !important;
+    scrollbar-width: thin;
+    scrollbar-color: #888 #f1f1f1;
+}
+
+.navigation {
+    position: fixed;
+    top: 0;
+    -ms-flex-negative: 0;
+    flex-shrink: 0;
+    width: 280px;
+    height: 100vh;
+    overflow: hidden;
+    background: 0 0;
+    -webkit-transition: width .25s;
+    -o-transition: width .25s;
+    transition: width .25s;
+    padding-top: calc(90px + 6px);
+
+    .nav-content {
+        width: 280px;
+        transition: all .2s ease;
+        padding-left: 15px;
+        padding-right: 15px;
+
+        ul {
+            padding: 0;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+
+            li {
+                list-style-image: none;
+                list-style-type: none;
+                margin: 1px 5px;
+                list-style: none;
+
+                a {
+                    display: flex;
+                    align-items: center;
+                    padding: 12px 15px 12px 15px;
+                    white-space: nowrap;
+                    position: relative;
+                    font-size: 15px;
+                    font-weight: 600;
+                    line-height: 28px;
+                    color: #888;
+                    height: 54px;
+                    display: flex;
+                    overflow: hidden;
+                    transition: all .2s ease;
+                    text-decoration: none;
+                    outline: 0;
+
+                    .text-current {
+                        color: $primary-color;
+                        font-size: 30px;
+                    }
+
+                    i {
+                        font-size: 20px;
+                        color: #fff;
+                        top: 0;
+                        position: relative;
+                        vertical-align: middle;
+                    }
+
+                    span {
+                        margin-left: 10px;
+                    }
+
+                    .circle-count {
+                        padding: 1px 6px;
+                        -webkit-border-radius: 7px;
+                        -moz-border-radius: 7px;
+                        border-radius: 7px;
+                        position: absolute;
+                        top: 6px;
+                        display: inline-block;
+                        color: #fff;
+                        font-size: 13px;
+                        right: 13px;
+                    }
+                }
+
+                .open-font {
+                    font-family: "Open Sans", sans-serif;
+                }
+            }
+        }
+
+        .nav-caption {
+            margin-bottom: 5px;
+            padding-left: 25px;
+            white-space: nowrap;
+            color: #808191;
+            transition: padding .25s;
+            font-size: 12px;
+        }
+    }
+}

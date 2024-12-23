@@ -1,11 +1,55 @@
 @import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
 
+@mixin primary-font {
+    font-family: $primary-font;
+}
+
 // Định nghĩa biến màu
 $primary-color: #05f; // Màu xanh dương
+$primary-color-shade: #09f;
 $secondary-color: #2ecc71; // Màu xanh lá
 $danger-color: #e74c3c; // Màu đỏ
 $background-color: #ecf0f1; // Màu nền
+$primary-font: 'Fredoka One', sans-serif;
 
-.fredoka-font {
-    font-family: 'Fredoka One', sans-serif;
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.bg-blue-gradiant {
+    background: linear-gradient(to right, #0575e6, #021b79) !important;
+}
+
+.bg-red-gradiant {
+    background: linear-gradient(to right, #e44d26, #f16529) !important;
+}
+
+.bg-gold-gradiant {
+    background: linear-gradient(to right, #f2994a, #f2c94c) !important;
+}
+
+.bg-mini-gradiant {
+    background: linear-gradient(to right, #ee0979, #ff6a00) !important;
+}
+
+.bg-primary-gradiant {
+    background: linear-gradient(135deg, $primary-color, $primary-color-shade) !important;
+}
+
+.bg-warning-custom {
+    background-color: #fe9431 !important;
+}
+
+.text-grey-500 {
+    color: #adb5bd !important;
+}
+
+.btn-round-md {
+    width: 45px;
+    height: 45px;
+    border-radius: 45px;
+    display: inline-block;
+    line-height: 45px !important;
+    text-align: center;
 }
