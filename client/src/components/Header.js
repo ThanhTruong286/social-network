@@ -3,7 +3,7 @@ import "../assets/scss/components/Header.scss";
 
 const Header = () => {
     return (
-        <nav class="navbar navbar-light bg-white ms-5">
+        <nav class="navbar navbar-light bg-white ps-5">
             <a class="navbar-brand" href="#">
                 <img alt="Logo" height="32" src="https://storage.googleapis.com/a1aa/image/cUwDqaSYVeV7HyIGUwFiHQlnRayL1gQBmG2jmcdXev65ls9TA.jpg" width="32" />
                 <span class="brand">

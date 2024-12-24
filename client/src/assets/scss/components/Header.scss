@@ -9,16 +9,13 @@
     z-index: 10;
     display: flex;
     align-items: center;
-    /* Căn giữa theo chiều dọc */
     justify-content: space-between;
-    /* Đảm bảo các phần được phân bố đều */
     height: 96px;
     padding: 0 15px;
     background: #fff;
     border-bottom: 2px #eee solid;
     transition: left 0.25s;
 
-    /* Thêm padding bên trong để căn chỉnh */
     >* {
         margin-top: auto;
         /* Đẩy các phần tử vào giữa */

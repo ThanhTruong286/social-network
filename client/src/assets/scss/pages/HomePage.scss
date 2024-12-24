@@ -45,11 +45,14 @@
 }
 
 .main-content {
+    font-family: 'Montserrat', sans-serif;
     background-color: #fbfcfe;
 
     .middle-sidebar-bottom {
         width: 100%;
         padding: 20px 0 10px 0;
+        overflow-y: auto;
+        height: calc(100vh - 96px);
 
         .middle-sidebar-left {
             width: 100%;
@@ -60,5 +63,18 @@
                 height: 100%;
             }
         }
+    }
+
+    .middle-sidebar-bottom::-webkit-scrollbar {
+        width: 8px;
+    }
+
+    .middle-sidebar-bottom::-webkit-scrollbar-thumb {
+        background: #ccc;
+        border-radius: 4px;
+    }
+
+    .middle-sidebar-bottom::-webkit-scrollbar-track {
+        background: #f1f1f1;
     }
 }
