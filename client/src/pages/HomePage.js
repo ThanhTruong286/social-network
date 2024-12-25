@@ -3,6 +3,9 @@ import "../assets/scss/pages/HomePage.scss";
 import FriendRequest from '../components/FriendRequest';
 import UserStory from '../components/UserStory';
 import ConfirmFriend from '../components/ConfirmFriend';
+import SuggestPage from '../components/SuggestPage';
+import SuggestGroup from '../components/SuggestGroup';
+import Event from '../components/Event';
 
 const HomePage = () => {
     return (
@@ -23,6 +26,9 @@ const HomePage = () => {
                             <div className='activity-sidebar'>
                                 <FriendRequest />
                                 <ConfirmFriend />
+                                <SuggestPage />
+                                <SuggestGroup />
+                                <Event />
                             </div>
                         </div>
                     </div>

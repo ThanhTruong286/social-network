@@ -1,0 +1,25 @@
+@import '../../../App.scss';
+
+.event-list {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    border-radius: 12px;
+
+    .card-body {
+
+        h4 {
+            font-weight: bold;
+            font-size: 12px;
+            margin: 0;
+        }
+
+        a {
+            font-size: 12px;
+            font-weight: 600;
+            text-decoration: none;
+        }
+
+        span {
+            font-weight: 500;
+        }
+    }
+}

@@ -1,11 +1,12 @@
 import React from 'react';
 import "../assets/scss/components/Header.scss";
+import logo from "../assets/images/logo.png";
 
 const Header = () => {
     return (
         <nav class="navbar navbar-light bg-white ps-5">
             <a class="navbar-brand" href="#">
-                <img alt="Logo" height="32" src="https://storage.googleapis.com/a1aa/image/cUwDqaSYVeV7HyIGUwFiHQlnRayL1gQBmG2jmcdXev65ls9TA.jpg" width="32" />
+                {/* <img alt="Logo" height="40" width="40" /> */}
                 <span class="brand">
                     Hopi
                 </span>

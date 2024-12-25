@@ -1,0 +1,55 @@
+@import '../../../App.scss';
+
+.suggest-group {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    border-radius: 12px;
+
+    .title-block {
+        border-bottom: 1px solid #DCDCDC;
+    }
+
+    .card-body {
+
+        h4 {
+            font-weight: bold;
+            font-size: 12px;
+            margin: 0;
+        }
+
+        a {
+            font-size: 12px;
+            font-weight: 600;
+            text-decoration: none;
+        }
+
+        span {
+            font-weight: 500;
+        }
+
+        .memberlist {
+            margin-left: -15px;
+            position: relative;
+
+            li {
+                display: inline-block;
+                float: none;
+                position: relative;
+                width: 15px;
+
+                img {
+                    vertical-align: middle;
+                }
+            }
+
+            .last-member {
+                a {
+                    width: 30px;
+                    height: 30px;
+                    display: inline-block;
+                    border-radius: 30px;
+                    line-height: 30px;
+                }
+            }
+        }
+    }
+}

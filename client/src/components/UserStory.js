@@ -1,19 +1,33 @@
 import { Swiper, SwiperSlide } from 'swiper/react';
 import "../assets/scss/components/UserStory.scss";
 import 'swiper/css';
+import React from 'react';
+import story1 from '../assets/images/story.jpg';
+import story2 from '../assets/images/story2.jpg';
+import story3 from '../assets/images/story3.jpg';
+import story4 from '../assets/images/story4.jpg';
+import story5 from '../assets/images/story5.jpg';
+import story6 from '../assets/images/story6.jpg';
+import story7 from '../assets/images/story7.jpg';
+import story8 from '../assets/images/story8.jpg';
+import avatar1 from '../assets/images/user-11.png';
+import avatar2 from '../assets/images/user-3.png';
+import avatar3 from '../assets/images/user-4.png';
+import avatar4 from '../assets/images/user-5.png';
+import avatar5 from '../assets/images/user-6.png';
+import avatar6 from '../assets/images/user-7.png';
+import avatar7 from '../assets/images/user-8.png';
 
 const UserStory = () => {
-    const imagePath = '/assets/images';
-
     const stories = [
-        { id: 1, background: `${imagePath}/story.jpg`, avatar: `${imagePath}/user-11.png`, name: 'John Doe' },
-        { id: 2, background: `${imagePath}/story2.jpg`, avatar: `${imagePath}/user-2.png`, name: 'Jane Smith' },
-        { id: 3, background: `${imagePath}/story3.jpg`, avatar: `${imagePath}/user-3.png`, name: 'Alice Johnson' },
-        { id: 4, background: `${imagePath}/story4.jpg`, avatar: `${imagePath}/user-4.png`, name: 'Michael Brown' },
-        { id: 5, background: `${imagePath}/story5.jpg`, avatar: `${imagePath}/user-5.png`, name: 'Emily Davis' },
-        { id: 6, background: `${imagePath}/story6.jpg`, avatar: `${imagePath}/user-6.png`, name: 'David Wilson' },
-        { id: 7, background: `${imagePath}/story7.jpg`, avatar: `${imagePath}/user-7.png`, name: 'Sophia Moore' },
-        { id: 8, background: `${imagePath}/story8.jpg`, avatar: `${imagePath}/user-8.png`, name: 'James Taylor' },
+        { id: 1, background: story1, avatar: avatar1, name: 'John Doe' },
+        { id: 2, background: story2, avatar: avatar2, name: 'Jane Smith' },
+        { id: 3, background: story3, avatar: avatar2, name: 'Alice Johnson' },
+        { id: 4, background: story4, avatar: avatar3, name: 'Michael Brown' },
+        { id: 5, background: story5, avatar: avatar4, name: 'Emily Davis' },
+        { id: 6, background: story6, avatar: avatar5, name: 'David Wilson' },
+        { id: 7, background: story7, avatar: avatar6, name: 'Sophia Moore' },
+        { id: 8, background: story8, avatar: avatar7, name: 'James Taylor' },
     ];
 
     return (

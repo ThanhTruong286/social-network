@@ -47,6 +47,10 @@ body {
     background-color: #fe9431 !important;
 }
 
+.bg-success {
+    background-color: #10d876 !important;
+}
+
 .text-grey-500 {
     color: #adb5bd !important;
 }
@@ -77,10 +81,54 @@ body {
     text-align: center;
 }
 
+.text-grey-800 {
+    color: #343a40 !important;
+}
+
 .text-grey-900 {
     color: #212529 !important;
 }
 
 .bg-greylight {
     background-color: #f5f5f5 !important;
+}
+
+.rounded-xxl {
+    border-radius: 15px !important;
+}
+
+.rounded-xl {
+    border-radius: 30px !important;
+}
+
+.bg-grey {
+    background-color: #eee !important;
+}
+
+.lh-1 {
+    line-height: 1 !important;
+}
+
+.lh-28 {
+    line-height: 28px;
+}
+
+.w20 {
+    width: 18px !important;
+}
+
+.d-inline-block {
+    display: inline-block !important;
+}
+
+.w35 {
+    width: 35px !important;
+}
+
+.font-lg {
+    font-size: 25px !important;
+}
+
+.font-xsss {
+    font-size: 14px !important;
 }
