@@ -1,43 +1,50 @@
 @import '../../../App.scss';
 
-.title-block {
-    border-bottom: 1px solid #DCDCDC;
-}
+.friend-request-list {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    border-radius: 12px;
 
-.card-body {
-
-    h4 {
-        font-weight: bold;
-        font-size: 12px;
-        margin: 0;
+    .title-block {
+        border-bottom: 1px solid #DCDCDC;
     }
 
-    a {
-        font-size: 12px;
-        font-weight: 600;
-        text-decoration: none;
-    }
+    .card-body {
 
-    img {
-        max-width: 60px;
-        max-height: 60px;
-    }
 
-    span {
-        font-weight: 500;
-    }
 
-    #accept-friend-request,
-    #delete-friend-request {
-        padding: 10px;
-        text-align: center;
-        border-radius: 30px;
-        font-size: 12px;
-        cursor: pointer;
-    }
+        h4 {
+            font-weight: bold;
+            font-size: 12px;
+            margin: 0;
+        }
 
-    #delete-friend-request {
-        background-color: #eee;
-        color: black;
+        a {
+            font-size: 12px;
+            font-weight: 600;
+            text-decoration: none;
+        }
+
+        img {
+            max-width: 45px;
+            max-height: 45px;
+        }
+
+        span {
+            font-weight: 500;
+        }
+
+        #accept-friend-request,
+        #delete-friend-request {
+            padding: 10px;
+            text-align: center;
+            border-radius: 30px;
+            font-size: 12px;
+            cursor: pointer;
+        }
+
+        #delete-friend-request {
+            background-color: #eee;
+            color: black;
+        }
     }
 }

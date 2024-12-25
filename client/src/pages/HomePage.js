@@ -14,10 +14,16 @@ const HomePage = () => {
                             <div className='card w-100 shadow-none bg-transparent bg-transparent-card border-0 p-0 mb-0'>
                                 <UserStory />
                             </div>
+                            <div className='middle-content'>
+
+                            </div>
+
                         </div>
                         <div className='col-xl-4 col-xxl-3 col-lg-4 ps-lg-0'>
-                            <FriendRequest />
-                            <ConfirmFriend />
+                            <div className='activity-sidebar'>
+                                <FriendRequest />
+                                <ConfirmFriend />
+                            </div>
                         </div>
                     </div>
                 </div>

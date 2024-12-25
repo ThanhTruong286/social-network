@@ -45,7 +45,8 @@
 }
 
 .main-content {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Montserrat Alternates', sans-serif !important;
+    line-height: 1.5;
     background-color: #fbfcfe;
 
     .middle-sidebar-bottom {
@@ -61,6 +62,16 @@
                 visibility: visible;
                 overflow: visible;
                 height: 100%;
+
+                .activity-sidebar {
+                    min-width: 282px;
+                    min-height: 517px;
+                }
+
+                .middle-content {
+                    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+                    border-radius: 12px;
+                }
             }
         }
     }
