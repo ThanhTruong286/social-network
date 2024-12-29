@@ -6,6 +6,7 @@ import ConfirmFriend from '../components/ConfirmFriend';
 import SuggestPage from '../components/SuggestPage';
 import SuggestGroup from '../components/SuggestGroup';
 import Event from '../components/Event';
+import CreatePost from '../components/CreatePost';
 
 const HomePage = () => {
     return (
@@ -18,7 +19,7 @@ const HomePage = () => {
                                 <UserStory />
                             </div>
                             <div className='middle-content'>
-
+                                <CreatePost />
                             </div>
 
                         </div>

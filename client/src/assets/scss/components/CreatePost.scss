@@ -1,0 +1,30 @@
+@import '../../../App.scss';
+
+.create-post {
+    a {
+        text-decoration: none;
+    }
+
+    span {
+        font-size: 12px;
+        font-weight: 600;
+        line-height: 21px;
+    }
+
+    .avatar {
+        img {
+            vertical-align: middle !important;
+        }
+    }
+
+    .dropdown-menu {
+        i {
+            max-width: 18px;
+        }
+
+        h4 {
+            cursor: pointer;
+        }
+    }
+
+}

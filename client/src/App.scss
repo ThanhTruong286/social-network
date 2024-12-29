@@ -64,10 +64,6 @@ body {
     text-align: center;
 }
 
-.fw-600 {
-    font-weight: 600 !important;
-}
-
 .rounded-3 {
     border-radius: .3rem !important;
 }
@@ -81,6 +77,10 @@ body {
     text-align: center;
 }
 
+.text-grey-700 {
+    color: #495057 !important;
+}
+
 .text-grey-800 {
     color: #343a40 !important;
 }
@@ -91,6 +91,10 @@ body {
 
 .bg-greylight {
     background-color: #f5f5f5 !important;
+}
+
+.text-primary {
+    color: #1e74fd !important;
 }
 
 .rounded-xxl {
@@ -117,12 +121,20 @@ body {
     width: 18px !important;
 }
 
-.d-inline-block {
-    display: inline-block !important;
+.w30 {
+    width: 30px !important;
 }
 
 .w35 {
     width: 35px !important;
+}
+
+.w-100 {
+    width: 100% !important;
+}
+
+.h100 {
+    height: 100px !important;
 }
 
 .font-lg {
@@ -131,4 +143,24 @@ body {
 
 .font-xsss {
     font-size: 14px !important;
+}
+
+.font-xssss {
+    font-size: 12px !important;
+}
+
+.fw-600 {
+    font-weight: 600 !important;
+}
+
+.fw-500 {
+    font-weight: 500 !important;
+}
+
+.d-inline-block {
+    display: inline-block !important;
+}
+
+.border-light-md {
+    border: 2px #f1f1f1 solid;
 }
