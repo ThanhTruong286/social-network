@@ -51,8 +51,65 @@ body {
     background-color: #10d876 !important;
 }
 
+.bg-twiiter {
+    background-color: #3b5999 !important;
+}
+
+.bg-greylight {
+    background-color: #f5f5f5 !important;
+}
+
+.bg-grey {
+    background-color: #eee !important;
+}
+
+.bg-facebook {
+    background-color: #0d66ff !important;
+}
+
+.bg-linkedin {
+    background-color: #0077b5 !important;
+}
+
+.bg-instagram {
+    background-color: #e4405f !important;
+}
+
+.bg-pinterest {
+    background-color: #bd081c !important;
+}
+
+.bg-youtube {
+    background-color: #cd201f !important;
+}
+
+.bg-tumblr {
+    background-color: #34465d !important;
+}
+
+.bg-flicker {
+    background-color: #ff0084 !important;
+}
+
+.bg-whatsup {
+    background-color: #25d366 !important;
+}
+
 .text-grey-500 {
     color: #adb5bd !important;
+}
+
+.rounded-3 {
+    border-radius: .3rem !important;
+}
+
+.btn-round-xs {
+    width: 25px;
+    height: 25px;
+    border-radius: 25px;
+    display: inline-block;
+    line-height: 25px !important;
+    text-align: center;
 }
 
 .btn-round-md {
@@ -64,16 +121,21 @@ body {
     text-align: center;
 }
 
-.rounded-3 {
-    border-radius: .3rem !important;
-}
-
 .btn-round-sm {
     width: 35px;
     height: 35px;
     border-radius: 35px;
     display: inline-block;
     line-height: 35px !important;
+    text-align: center;
+}
+
+.btn-round-lg {
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+    display: inline-block;
+    line-height: 50px;
     text-align: center;
 }
 
@@ -89,10 +151,6 @@ body {
     color: #212529 !important;
 }
 
-.bg-greylight {
-    background-color: #f5f5f5 !important;
-}
-
 .text-primary {
     color: #1e74fd !important;
 }
@@ -103,10 +161,6 @@ body {
 
 .rounded-xl {
     border-radius: 30px !important;
-}
-
-.bg-grey {
-    background-color: #eee !important;
 }
 
 .lh-1 {
@@ -141,12 +195,20 @@ body {
     font-size: 25px !important;
 }
 
+.font-xs {
+    font-size: 18px !important;
+}
+
 .font-xsss {
     font-size: 14px !important;
 }
 
 .font-xssss {
     font-size: 12px !important;
+}
+
+.fw-700 {
+    font-weight: 700 !important;
 }
 
 .fw-600 {
@@ -163,4 +225,8 @@ body {
 
 .border-light-md {
     border: 2px #f1f1f1 solid;
+}
+
+.right-35 {
+    right: 35px;
 }

@@ -7,6 +7,7 @@ import SuggestPage from '../components/SuggestPage';
 import SuggestGroup from '../components/SuggestGroup';
 import Event from '../components/Event';
 import CreatePost from '../components/CreatePost';
+import UserPost from '../components/UserPost';
 
 const HomePage = () => {
     return (
@@ -20,6 +21,7 @@ const HomePage = () => {
                             </div>
                             <div className='middle-content'>
                                 <CreatePost />
+                                <UserPost />
                             </div>
 
                         </div>
