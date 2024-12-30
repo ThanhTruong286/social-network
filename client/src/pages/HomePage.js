@@ -8,6 +8,10 @@ import SuggestGroup from '../components/SuggestGroup';
 import Event from '../components/Event';
 import CreatePost from '../components/CreatePost';
 import UserPost from '../components/UserPost';
+import UserLiveStream from '../components/UserLiveStream';
+import UserVideoPost from '../components/UserVideoPost';
+import FollowUser from '../components/FollowUser';
+import PostLoading from '../components/PostLoading';
 
 const HomePage = () => {
     return (
@@ -22,6 +26,12 @@ const HomePage = () => {
                             <div className='middle-content'>
                                 <CreatePost />
                                 <UserPost />
+                                <UserLiveStream />
+                                <UserVideoPost />
+                                <FollowUser />
+                                <UserVideoPost />
+                                <UserPost />
+                                <PostLoading />
                             </div>
 
                         </div>

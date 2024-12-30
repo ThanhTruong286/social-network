@@ -1,0 +1,11 @@
+@import '../../../App.scss';
+
+.user-livestream-container {
+    .livestream-card {
+        img {
+            max-width: 65px;
+            max-height: 65px;
+            vertical-align: middle;
+        }
+    }
+}

@@ -1,0 +1,51 @@
+.stage {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    /* Khu vực hiển thị loading */
+}
+
+.dot-typing {
+    display: flex;
+    gap: 5px;
+    /* Khoảng cách giữa các dấu chấm */
+}
+
+.dot-typing span {
+    width: 10px;
+    /* Kích thước của dấu chấm */
+    height: 10px;
+    background-color: #007bff;
+    /* Màu của dấu chấm */
+    border-radius: 50%;
+    /* Tạo hình tròn */
+    animation: dot-jump 1.5s infinite ease-in-out;
+}
+
+/* Thêm hiệu ứng nhảy lệch pha */
+.dot-typing span:nth-child(1) {
+    animation-delay: 0s;
+}
+
+.dot-typing span:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.dot-typing span:nth-child(3) {
+    animation-delay: 0.4s;
+}
+
+/* Hiệu ứng nhảy lên */
+@keyframes dot-jump {
+
+    0%,
+    80%,
+    100% {
+        transform: translateY(0);
+    }
+
+    40% {
+        transform: translateY(-10px);
+    }
+}
