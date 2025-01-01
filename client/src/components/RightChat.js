@@ -14,14 +14,14 @@ const RightChat = () => {
     const [selectedUser, setSelectedUser] = useState(null); // State để theo dõi người dùng đã chọn
 
     const users = [
-        { name: 'Hurin Seary', avatar: avatar1 },
-        { name: 'Victor Exrixon', avatar: avatar2 },
-        { name: 'Surfiya Zakir', avatar: avatar3 },
-        { name: 'Goria Coast', avatar: avatar4 },
-        { name: 'Hurin Seary', avatar: avatar5 },
-        { name: 'David Goria', avatar: avatar6 },
-        { name: 'Seary Victor', avatar: avatar7 },
-        { name: 'Ana Seary', avatar: avatar8 },
+        { name: 'Hurin Seary', avatar: avatar1, unreadMessages: 2 },
+        { name: 'Victor Exrixon', avatar: avatar2, unreadMessages: 0 },
+        { name: 'Surfiya Zakir', avatar: avatar3, unreadMessages: 5 },
+        { name: 'Goria Coast', avatar: avatar4, unreadMessages: 0 },
+        { name: 'Hurin Seary', avatar: avatar5, unreadMessages: 1 },
+        { name: 'David Goria', avatar: avatar6, unreadMessages: 0 },
+        { name: 'Seary Victor', avatar: avatar7, unreadMessages: 3 },
+        { name: 'Ana Seary', avatar: avatar8, unreadMessages: 0 },
     ];
 
     // Hàm xử lý khi người dùng nhấn vào tên
@@ -49,6 +49,11 @@ const RightChat = () => {
                                         {user.name}
                                     </a>
                                 </h3>
+                                {user.unreadMessages > 0 ? (
+                                    <span className="badge badge-primary text-white badge-pill fw-500 mt-0">{user.unreadMessages}</span>
+                                ) : (
+                                    <span className="bg-success ms-auto btn-round-xss"></span> // Trạng thái hoạt động
+                                )}
                             </li>
                         ))}
                     </ul>
