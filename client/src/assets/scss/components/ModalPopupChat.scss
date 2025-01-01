@@ -1,0 +1,187 @@
+@import '../../../App.scss';
+
+.modal-popup-chat {
+    padding: 20px;
+    position: fixed;
+    bottom: 0;
+    right: 270px;
+    z-index: 100;
+    display: block;
+
+    .modal-popup-wrap {
+        width: 320px;
+
+        .avatar {
+            float: left;
+        }
+
+        .close-btn {
+            right: 0;
+        }
+
+        .modal-popup-body {
+            overflow-y: auto;
+            position: relative;
+
+            .message-content {
+                color: #594939;
+                padding: 10px 20px;
+                background-color: #fcf6ee;
+                border-radius: 20px 20px 20px 0;
+                max-width: 80%;
+                display: inline-block;
+                text-align: left;
+            }
+
+            .message.self {
+                text-align: right;
+
+                .message-content {
+                    border-radius: 20px 20px 0 20px;
+                    background-color: #e2efff;
+                    color: #2a4e7f;
+                    color: #594939;
+                    padding: 10px 20px;
+                    max-width: 80%;
+                    display: inline-block;
+                    text-align: left;
+                }
+            }
+
+            .snippet {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                max-width: 80px;
+                height: auto;
+                margin-left: auto;
+                padding: 5px;
+
+                .stage {
+                    height: auto;
+
+                    .dot-typing {
+
+                        div {
+                            width: 6px;
+                            height: 6px;
+                            background-color: #05f;
+                            border-radius: 50%;
+                            animation: dot-flash 1.5s infinite ease-in-out;
+                        }
+
+                        div:nth-child(1) {
+                            animation-delay: 0s;
+                        }
+
+                        div:nth-child(2) {
+                            animation-delay: 0.2s;
+                        }
+
+                        div:nth-child(3) {
+                            animation-delay: 0.4s;
+                        }
+                    }
+
+                    @keyframes dot-flash {
+
+                        0%,
+                        100% {
+                            opacity: 0.2;
+                        }
+
+                        50% {
+                            opacity: 1;
+                        }
+                    }
+                }
+
+
+            }
+
+        }
+
+        .modal-popup-body::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        .modal-popup-body::-webkit-scrollbar-thumb {
+            background: #888;
+            border-radius: 4px !important;
+        }
+
+        .modal-popup-body::-webkit-scrollbar-track {
+            background: #f1f1f1;
+            border-radius: 4px;
+        }
+
+        .modal-popup-footer {
+            display: flex;
+            /* Sử dụng flexbox để căn giữa */
+            align-items: center;
+            /* Căn giữa theo chiều dọc */
+            padding: 10px;
+            /* Thêm padding để tạo khoảng cách */
+            border-top: 1px solid #eee;
+            /* Giữ border-top */
+
+            .card {
+                flex-grow: 1;
+                /* Đảm bảo thẻ card chiếm không gian đầy đủ */
+            }
+
+            .icon-right-input {
+                position: relative;
+                flex-grow: 1;
+                /* Chiếm không gian còn lại */
+                display: flex;
+                /* Sử dụng flexbox cho nội dung bên trong */
+                align-items: center;
+                /* Căn giữa theo chiều dọc */
+
+                .form-control {
+                    line-height: 50px;
+                    /* Chiều cao của input */
+                    height: 50px;
+                    /* Chiều cao của input */
+                    font-size: 14px;
+                    border: 2px #eee solid;
+                    padding-right: 50px;
+                    /* Tăng khoảng cách bên phải cho icon */
+                    padding-left: 10px;
+                    /* Khoảng cách bên trái để tạo không gian */
+                    border-radius: 25px;
+                    /* Làm tròn góc cho input */
+                    box-sizing: border-box;
+                    /* Đảm bảo padding không làm tăng kích thước */
+                }
+
+                button {
+                    position: absolute;
+                    /* Đặt icon ở vị trí tuyệt đối */
+                    right: 10px;
+                    /* Khoảng cách bên phải */
+                    top: 50%;
+                    /* Căn giữa theo chiều dọc */
+                    transform: translateY(-50%);
+                    /* Căn giữa hoàn hảo */
+                    background: transparent;
+                    /* Nền trong suốt */
+                    border: none;
+                    /* Bỏ border */
+                    cursor: pointer;
+                    /* Thay đổi con trỏ khi di chuột qua */
+                    padding: 0;
+                    /* Bỏ padding để giữ kích thước nhỏ */
+                }
+
+                i {
+                    font-size: 20px;
+                    /* Kích thước icon */
+                    color: #aaa;
+                    /* Màu sắc của icon */
+                }
+            }
+        }
+    }
+}

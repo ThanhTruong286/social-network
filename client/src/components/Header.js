@@ -4,7 +4,7 @@ import logo from "../assets/images/logo.png";
 
 const Header = () => {
     return (
-        <nav class="navbar navbar-light bg-white ps-5">
+        <header class="navbar navbar-light bg-white ps-5">
             <a class="navbar-brand" href="#">
                 {/* <img alt="Logo" height="40" width="40" /> */}
                 <span class="brand">
@@ -55,7 +55,7 @@ const Header = () => {
                     <img alt="User Avatar" class="rounded-circle" height="32" src="https://storage.googleapis.com/a1aa/image/Jqe4Ke4Fo9gRR0CqBi3eqf8rQEnJRXRyAXlGuQY5cL9jXy2PB.jpg" width="32" />
                 </div>
             </div>
-        </nav>
+        </header>
     );
 };
 

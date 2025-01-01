@@ -95,6 +95,10 @@ body {
     background-color: #25d366 !important;
 }
 
+.badge-primary {
+    background-color: #1e74fd;
+}
+
 .text-grey-500 {
     color: #adb5bd !important;
 }
@@ -107,6 +111,15 @@ body {
     width: 25px;
     height: 25px;
     border-radius: 25px;
+    display: inline-block;
+    line-height: 25px !important;
+    text-align: center;
+}
+
+.btn-round-xss {
+    width: 8px;
+    height: 8px;
+    border-radius: 8px;
     display: inline-block;
     line-height: 25px !important;
     text-align: center;
