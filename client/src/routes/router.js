@@ -10,6 +10,7 @@ import HomePage from '../pages/HomePage';
 import LoginPage from '../pages/LoginPage';
 import RegisterPage from '../pages/RegisterPage';
 import ForgotPasswordPage from '../pages/ForgotPasswordPage';
+import UserPage from '../pages/UserPage';
 
 const Router = () => {
     return (
@@ -20,6 +21,14 @@ const Router = () => {
                 element={
                     <MainLayout>
                         <HomePage />
+                    </MainLayout>
+                }
+            />
+            <Route
+                path='/user-page'
+                element={
+                    <MainLayout>
+                        <UserPage />
                     </MainLayout>
                 }
             />

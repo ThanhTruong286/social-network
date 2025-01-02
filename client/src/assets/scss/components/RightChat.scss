@@ -63,3 +63,17 @@
     margin-left: 0;
     overflow-y: scroll;
 }
+
+.right-scroll-bar::-webkit-scrollbar {
+    width: 8px;
+}
+
+.right-scroll-bar::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 4px !important;
+}
+
+.right-scroll-bar::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 4px;
+}

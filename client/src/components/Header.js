@@ -18,7 +18,7 @@ const Header = () => {
             </div>
             <div class="action-btn d-flex align-items-center">
                 <div class="icon-circle active">
-                    <i class="fas fa-home">
+                    <i class="fa-solid fa-house">
                     </i>
                 </div>
                 <div class="icon-circle">
@@ -40,11 +40,11 @@ const Header = () => {
             </div>
             <div class="d-flex align-items-center navbar-end me-5">
                 <div class="icon-circle notification-dot">
-                    <i class="fas fa-bell text-primary">
+                    <i class="fa-solid fa-bell text-primary">
                     </i>
                 </div>
                 <div class="icon-circle">
-                    <i class="fas fa-comment text-primary">
+                    <i class="fa-solid fa-comment text-primary">
                     </i>
                 </div>
                 <div class="icon-circle">

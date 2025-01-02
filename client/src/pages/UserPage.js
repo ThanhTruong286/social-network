@@ -1,46 +1,37 @@
 import React from 'react';
-import "../assets/scss/pages/HomePage.scss";
-import FriendRequest from '../components/FriendRequest';
-import UserStory from '../components/UserStory';
-import ConfirmFriend from '../components/ConfirmFriend';
-import SuggestPage from '../components/SuggestPage';
-import SuggestGroup from '../components/SuggestGroup';
+import "../assets/scss/pages/UserPage.scss";
 import Event from '../components/Event';
 import CreatePost from '../components/CreatePost';
 import UserPost from '../components/UserPost';
-import UserLiveStream from '../components/UserLiveStream';
 import UserVideoPost from '../components/UserVideoPost';
-import FollowUser from '../components/FollowUser';
 import PostLoading from '../components/PostLoading';
+import UserWall from '../components/UserWall';
+import UserAboutBar from '../components/UserAboutBar';
 
-const HomePage = () => {
+
+const UserPage = () => {
     return (
         <div className='main-content right-chat-active'>
             <div className='middle-sidebar-bottom'>
                 <div className='middle-sidebar-left'>
+                    <div className='row'>
+                        <UserWall />
+                    </div>
                     <div className='row feed-body'>
                         <div className='col-xl-8 col-lg-8'>
-                            <div className='card w-100 shadow-none bg-transparent bg-transparent-card border-0 p-0 mb-0'>
-                                <UserStory />
-                            </div>
                             <div className='middle-content'>
                                 <CreatePost />
                                 <UserPost />
-                                <UserLiveStream />
                                 <UserVideoPost />
-                                <FollowUser />
-                                <UserVideoPost />
+
                                 <UserPost />
+                                <UserVideoPost />
                                 <PostLoading />
                             </div>
-
                         </div>
                         <div className='col-xl-4 col-lg-4 ps-lg-0'>
                             <div className='activity-sidebar'>
-                                <FriendRequest />
-                                <ConfirmFriend />
-                                <SuggestPage />
-                                <SuggestGroup />
+                                <UserAboutBar />
                                 <Event />
                             </div>
                         </div>
@@ -48,7 +39,8 @@ const HomePage = () => {
                 </div>
             </div>
         </div>
-    );
-};
 
-export default HomePage;
+    )
+}
+
+export default UserPage

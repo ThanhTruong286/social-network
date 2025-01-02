@@ -196,8 +196,16 @@ body {
     width: 35px !important;
 }
 
+.w50 {
+    width: 50px !important;
+}
+
 .w-100 {
     width: 100% !important;
+}
+
+.w100 {
+    width: 100px !important;
 }
 
 .w200 {
@@ -248,6 +256,22 @@ body {
     border: 2px #f1f1f1 solid;
 }
 
+.right-15 {
+    right: 15px !important;
+}
+
 .right-35 {
     right: 35px;
+}
+
+.pl-15 {
+    padding-left: 150px !important;
+}
+
+.position-absolute-md {
+    position: absolute;
+}
+
+.border-top-xs {
+    border-top: 1px solid #f1f1f1;
 }
