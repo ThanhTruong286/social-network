@@ -13,6 +13,7 @@ import ForgotPasswordPage from '../pages/ForgotPasswordPage';
 import UserPage from '../pages/UserPage';
 import FriendListPage from '../pages/FriendListPage';
 import BagdePage from '../pages/BagdePage';
+import ExploreStoryPage from '../pages/ExploreStoryPage';
 
 const Router = () => {
     return (
@@ -49,6 +50,15 @@ const Router = () => {
                 element={
                     <MainLayout>
                         <BagdePage />
+                    </MainLayout>
+                }
+            />
+
+            <Route
+                path='/explore-stories'
+                element={
+                    <MainLayout>
+                        <ExploreStoryPage />
                     </MainLayout>
                 }
             />

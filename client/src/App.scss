@@ -23,6 +23,10 @@ body {
     /* Cải thiện độ rõ */
 }
 
+.bg-image-cover {
+    background-size: cover;
+}
+
 .bg-blue-gradiant {
     background: linear-gradient(to right, #0575e6, #021b79) !important;
 }
@@ -222,6 +226,10 @@ body {
 
 .h100 {
     height: 100px !important;
+}
+
+.h300 {
+    height: 300px !important;
 }
 
 .font-lg {

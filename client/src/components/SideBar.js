@@ -12,7 +12,7 @@ const SideBar = () => {
                             <li class="logo d-none d-xl-block d-lg-block"></li>
                             <li><a href="/" class="nav-content-bttn open-font"><i class="fa-solid fa-tv btn-round-md bg-blue-gradiant me-3"></i><span>Newsfeed</span></a></li>
                             <li><a href="/bagde-list" class="nav-content-bttn open-font"><i class="fa-solid fa-medal btn-round-md bg-red-gradiant me-3"></i><span>Badges</span></a></li>
-                            <li><a href="default-storie.html" class="nav-content-bttn open-font"><i class="fa-solid fa-globe btn-round-md bg-gold-gradiant me-3"></i><span>Explore Stories</span></a></li>
+                            <li><a href="/explore-stories" class="nav-content-bttn open-font"><i class="fa-solid fa-globe btn-round-md bg-gold-gradiant me-3"></i><span>Explore Stories</span></a></li>
                             <li><a href="default-group.html" class="nav-content-bttn open-font"><i class="fa-solid fa-bolt btn-round-md bg-mini-gradiant me-3"></i><span>Popular Groups</span></a></li>
                             <li><a href="/user-page" class="nav-content-bttn open-font"><i class="fa-solid fa-user btn-round-md bg-primary-gradiant me-3"></i><span>Author Profile </span></a></li>
                         </ul>
