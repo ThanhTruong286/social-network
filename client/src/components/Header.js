@@ -5,7 +5,7 @@ import logo from "../assets/images/logo.png";
 const Header = () => {
     return (
         <header class="navbar navbar-light bg-white ps-5">
-            <a class="navbar-brand" href="#">
+            <a class="navbar-brand" href="/">
                 {/* <img alt="Logo" height="40" width="40" /> */}
                 <span class="brand">
                     Hopi

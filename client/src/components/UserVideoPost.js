@@ -90,7 +90,7 @@ const UserVideoPost = () => {
                         <div class="card-body p-0 d-flex">
                             <ul class="d-flex align-items-center justify-content-between mt-2 mb-0">
                                 <li class="me-1"><a href="#" class="btn-round-lg bg-facebook"><i class="font-xs fa-brands fa-facebook-f text-white"></i></a></li>
-                                <li class="me-1"><a href="#" class="btn-round-lg bg-twiiter"><i class="font-xs fa-brands fa-twitter text-white"></i></a></li>
+                                <li class="me-1"><a href="#" class="btn-round-lg bg-twitter"><i class="font-xs fa-brands fa-twitter text-white"></i></a></li>
                                 <li class="me-1"><a href="#" class="btn-round-lg bg-linkedin"><i class="font-xs fa-brands fa-linkedin-in text-white"></i></a></li>
                                 <li class="me-1"><a href="#" class="btn-round-lg bg-instagram"><i class="font-xs fa-brands fa-instagram text-white"></i></a></li>
                                 <li><a href="#" class="btn-round-lg bg-pinterest"><i class="font-xs fa-brands fa-pinterest text-white"></i></a></li>

@@ -1,0 +1,32 @@
+.bagde-list {
+    a {
+        text-decoration: none;
+    }
+
+    li {
+        list-style: none;
+    }
+
+    ul {
+        padding: 0;
+    }
+
+    .search-form-2 {
+        position: relative;
+
+        input {
+            height: 45px;
+            line-height: 45px;
+            padding-left: 20px;
+            border-radius: 8px;
+            font-weight: 500;
+        }
+
+        i {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            color: #999;
+        }
+    }
+}

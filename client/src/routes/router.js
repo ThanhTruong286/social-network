@@ -11,6 +11,8 @@ import LoginPage from '../pages/LoginPage';
 import RegisterPage from '../pages/RegisterPage';
 import ForgotPasswordPage from '../pages/ForgotPasswordPage';
 import UserPage from '../pages/UserPage';
+import FriendListPage from '../pages/FriendListPage';
+import BagdePage from '../pages/BagdePage';
 
 const Router = () => {
     return (
@@ -29,6 +31,24 @@ const Router = () => {
                 element={
                     <MainLayout>
                         <UserPage />
+                    </MainLayout>
+                }
+            />
+
+            <Route
+                path='/friend-list'
+                element={
+                    <MainLayout>
+                        <FriendListPage />
+                    </MainLayout>
+                }
+            />
+
+            <Route
+                path='/bagde-list'
+                element={
+                    <MainLayout>
+                        <BagdePage />
                     </MainLayout>
                 }
             />

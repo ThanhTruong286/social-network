@@ -51,7 +51,7 @@ body {
     background-color: #10d876 !important;
 }
 
-.bg-twiiter {
+.bg-twitter {
     background-color: #3b5999 !important;
 }
 
@@ -200,6 +200,14 @@ body {
     width: 50px !important;
 }
 
+.w65 {
+    width: 65px !important;
+}
+
+.w90 {
+    width: 90px !important;
+}
+
 .w-100 {
     width: 100% !important;
 }
@@ -220,8 +228,20 @@ body {
     font-size: 25px !important;
 }
 
+.font-md {
+    font-size: 22px !important;
+}
+
+.font-sm {
+    font-size: 20px !important;
+}
+
 .font-xs {
     font-size: 18px !important;
+}
+
+.font-xss {
+    font-size: 16px !important;
 }
 
 .font-xsss {
@@ -274,4 +294,8 @@ body {
 
 .border-top-xs {
     border-top: 1px solid #f1f1f1;
+}
+
+.shadow-xss {
+    box-shadow: 0 8px 30px rgba(0, 0, 0, .05) !important;
 }
