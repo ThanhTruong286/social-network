@@ -1,58 +1,60 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { Link, useLocation } from 'react-router-dom'; // Import Link và useLocation
 import "../assets/scss/components/Header.scss";
 import logo from "../assets/images/logo.png";
 
 const Header = () => {
+    const location = useLocation(); // Sử dụng useLocation để theo dõi đường dẫn hiện tại
+    const [activeIcon, setActiveIcon] = useState(location.pathname); // Khởi tạo activeIcon với đường dẫn hiện tại
+
+    const handleIconClick = (icon) => {
+        setActiveIcon(icon); // Cập nhật trạng thái khi nhấn vào biểu tượng
+    };
+
     return (
-        <header class="navbar navbar-light bg-white ps-5">
-            <a class="navbar-brand" href="/">
-                {/* <img alt="Logo" height="40" width="40" /> */}
-                <span class="brand">
+        <header className="navbar navbar-light bg-white ps-5">
+            <a className="navbar-brand" href="/">
+                <span className="brand">
                     Hopi
                 </span>
             </a>
-            <div class="search-bar me-5">
-                <i class="fas fa-search text-muted me-3">
-                </i>
+            <div className="search-bar me-5">
+                <i className="fas fa-search text-muted me-3"></i>
                 <input placeholder="Start typing to search.." type="text" />
             </div>
-            <div class="action-btn d-flex align-items-center">
-                <div class="icon-circle active">
-                    <i class="fa-solid fa-house">
-                    </i>
+            <div className="action-btn d-flex align-items-center">
+                <div className={`icon-circle ${activeIcon === '/' ? 'active' : ''}`}>
+                    <Link to='/' onClick={() => handleIconClick('/')}>
+                        <i className="fas fa-house"></i>
+                    </Link>
                 </div>
-                <div class="icon-circle">
-                    <i class="fas fa-bolt">
-                    </i>
+                <div className={`icon-circle ${activeIcon === '/bolt' ? 'active' : ''}`} onClick={() => handleIconClick('/bolt')}>
+                    <i className="fas fa-bolt"></i>
                 </div>
-                <div class="icon-circle">
-                    <i class="fas fa-video">
-                    </i>
+                <div className={`icon-circle ${activeIcon === '/explore-videos' ? 'active' : ''}`}>
+                    <Link to='/explore-videos' onClick={() => handleIconClick('/explore-videos')}>
+                        <i className="fas fa-video"></i>
+                    </Link>
                 </div>
-                <div class="icon-circle">
-                    <i class="fas fa-user">
-                    </i>
+                <div className={`icon-circle ${activeIcon === '/user' ? 'active' : ''}`} onClick={() => handleIconClick('/user')}>
+                    <i className="fas fa-user"></i>
                 </div>
-                <div class="icon-circle">
-                    <i class="fas fa-clipboard-list">
-                    </i>
+                <div className={`icon-circle ${activeIcon === '/clipboard-list' ? 'active' : ''}`} onClick={() => handleIconClick('/clipboard-list')}>
+                    <i className="fas fa-clipboard-list"></i>
                 </div>
             </div>
-            <div class="d-flex align-items-center navbar-end me-5">
-                <div class="icon-circle notification-dot">
-                    <i class="fa-solid fa-bell text-primary">
-                    </i>
+            <div className="d-flex align-items-center navbar-end me-5">
+                <div className="icon-circle notification-dot">
+                    <i className="fa-solid fa-bell text-primary"></i>
                 </div>
-                <div class="icon-circle">
-                    <i class="fa-solid fa-comment text-primary">
-                    </i>
+                <div className="icon-circle">
+                    <i className="fa-solid fa-comment text-primary"></i>
                 </div>
-                <div class="icon-circle">
-                    <i class="fas fa-cog text-primary">
-                    </i>
+                <div className="icon-circle">
+                    <i className="fas fa-cog text-primary"></i>
                 </div>
-                <div class="icon-circle">
-                    <img alt="User Avatar" class="rounded-circle" height="32" src="https://storage.googleapis.com/a1aa/image/Jqe4Ke4Fo9gRR0CqBi3eqf8rQEnJRXRyAXlGuQY5cL9jXy2PB.jpg" width="32" />
+                <div className="icon-circle">
+                    <img alt="User Avatar" className="rounded-circle" height="32" src="https://storage.googleapis.com/a1aa/image/Jqe4Ke4Fo9gRR0CqBi3eqf8rQEnJRXRyAXlGuQY5cL9jXy2PB.jpg" width="32" />
                 </div>
             </div>
         </header>

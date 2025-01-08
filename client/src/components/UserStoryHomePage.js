@@ -1,5 +1,5 @@
 import { Swiper, SwiperSlide } from 'swiper/react';
-import "../assets/scss/components/UserStory.scss";
+import "../assets/scss/components/UserStoryHomePage.scss";
 import 'swiper/css';
 import React from 'react';
 import story1 from '../assets/images/story.jpg';
@@ -19,6 +19,12 @@ import avatar6 from '../assets/images/user-7.png';
 import avatar7 from '../assets/images/user-8.png';
 
 const UserStory = () => {
+
+    const handleAvatarClick = (id) => {
+        // Redirect to the story details page for the given ID
+        window.location.href = `/stories/${id}`;
+    };
+
     const stories = [
         { id: 1, background: story1, avatar: avatar1, name: 'John Doe' },
         { id: 2, background: story2, avatar: avatar2, name: 'Jane Smith' },
@@ -34,22 +40,22 @@ const UserStory = () => {
         <div className="user-story-container">
             <Swiper
                 spaceBetween={2}
-                slidesPerView={Math.min(Math.max(stories.length + 1, 1), 5)} // Đảm bảo tối thiểu 1 slide, tối đa 5 slide
-                navigation // Hiển thị nút điều hướng
-                pagination={{ clickable: true }} // Hiển thị phân trang
+                slidesPerView={Math.min(Math.max(stories.length + 1, 1), 5)} // Ensure at least 1 slide, max 5 slides
+                navigation // Show navigation buttons
+                pagination={{ clickable: true }} // Show pagination
                 style={{ padding: 0 }}
                 breakpoints={{
                     640: {
-                        slidesPerView: Math.min(Math.max(stories.length + 1, 1), 2), // Ít nhất 1 slide, tối đa 2
+                        slidesPerView: Math.min(Math.max(stories.length + 1, 1), 2), // At least 1 slide, max 2
                     },
                     768: {
-                        slidesPerView: Math.min(Math.max(stories.length + 1, 1), 3), // Ít nhất 1 slide, tối đa 3
+                        slidesPerView: Math.min(Math.max(stories.length + 1, 1), 3), // At least 1 slide, max 3
                     },
                     1024: {
-                        slidesPerView: Math.min(Math.max(stories.length + 1, 1), 4), // Ít nhất 1 slide, tối đa 4
+                        slidesPerView: Math.min(Math.max(stories.length + 1, 1), 4), // At least 1 slide, max 4
                     },
                     1200: {
-                        slidesPerView: Math.min(Math.max(stories.length + 1, 1), 5), // Ít nhất 1 slide, tối đa 5
+                        slidesPerView: Math.min(Math.max(stories.length + 1, 1), 5), // At least 1 slide, max 5
                     },
                 }}
             >
@@ -61,7 +67,7 @@ const UserStory = () => {
                         className="card story-card"
                     >
                         <div className="card-body">
-                            <a href="#">
+                            <a href={`/stories/`}>
                                 <div className="avatar-container">
                                     <i className="fa-solid fa-plus"></i>
                                 </div>
@@ -71,7 +77,7 @@ const UserStory = () => {
                     </div>
                 </SwiperSlide>
 
-                {/* Render các story nếu có */}
+                {/* Render stories if available */}
                 {stories.map((story) => (
                     <SwiperSlide key={story.id}>
                         <div
@@ -79,11 +85,17 @@ const UserStory = () => {
                             style={{
                                 backgroundImage: `url(${story.background})`,
                             }}
+                            onClick={() => handleAvatarClick(story.id)}
                         >
                             <div className="card-body">
-                                <a href="#">
+                                <a href={`/stories/${story.id}`}>
                                     <div className="avatar-container">
-                                        <img src={story.avatar} alt="Avatar" className="avatar-img" />
+                                        <img
+                                            src={story.avatar}
+                                            alt="Avatar"
+                                            className="avatar-img"
+                                            style={{ cursor: 'pointer' }}
+                                        />
                                     </div>
                                     <h4 className="fw-700">{story.name}</h4>
                                 </a>

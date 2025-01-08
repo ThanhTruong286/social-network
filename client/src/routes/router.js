@@ -14,6 +14,7 @@ import UserPage from '../pages/UserPage';
 import FriendListPage from '../pages/FriendListPage';
 import BagdePage from '../pages/BagdePage';
 import ExploreStoryPage from '../pages/ExploreStoryPage';
+import ExploreVideoPost from '../pages/ExploreVideoPost';
 
 const Router = () => {
     return (
@@ -59,6 +60,15 @@ const Router = () => {
                 element={
                     <MainLayout>
                         <ExploreStoryPage />
+                    </MainLayout>
+                }
+            />
+
+            <Route
+                path='/explore-videos'
+                element={
+                    <MainLayout>
+                        <ExploreVideoPost />
                     </MainLayout>
                 }
             />

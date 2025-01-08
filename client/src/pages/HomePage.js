@@ -1,7 +1,7 @@
 import React from 'react';
 import "../assets/scss/pages/HomePage.scss";
 import FriendRequest from '../components/FriendRequest';
-import UserStory from '../components/UserStory';
+import UserStoryHomePage from '../components/UserStoryHomePage';
 import ConfirmFriend from '../components/ConfirmFriend';
 import SuggestPage from '../components/SuggestPage';
 import SuggestGroup from '../components/SuggestGroup';
@@ -21,7 +21,7 @@ const HomePage = () => {
                     <div className='row feed-body'>
                         <div className='col-xl-8 col-lg-8'>
                             <div className='card w-100 shadow-none bg-transparent bg-transparent-card border-0 p-0 mb-0'>
-                                <UserStory />
+                                <UserStoryHomePage />
                             </div>
                             <div className='middle-content'>
                                 <CreatePost />

@@ -1,0 +1,32 @@
+.user-list {
+    .story-indicator {
+        width: 12px;
+        /* Size of the circle */
+        height: 12px;
+        border-radius: 50%;
+        /* Make it a circle */
+        margin-left: 8px;
+        /* Space between avatar and circle */
+        background-color: red;
+        /* Default color */
+
+        &.has-stories {
+            background-color: green;
+            /* Color when user has stories */
+        }
+
+        &.no-stories {
+            background-color: lightgray;
+            /* Color when user has no stories */
+        }
+    }
+
+    .badge {
+        position: absolute;
+        right: 0;
+    }
+
+    a {
+        text-decoration: none;
+    }
+}

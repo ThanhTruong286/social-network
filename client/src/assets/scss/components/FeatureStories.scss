@@ -1,0 +1,51 @@
+@import '../../../App.scss';
+
+.user-story-list {
+    .img-border {
+        border: 2px $primary-color solid;
+        margin: 0;
+        border-radius: 32px !important;
+        width: 55px;
+        height: 56px;
+
+        img {
+            border: 2px #fff solid;
+            margin: 0;
+            border-radius: 32px !important;
+            width: 51px;
+            height: 51px;
+        }
+    }
+
+    a {
+        text-decoration: none;
+        outline: 0;
+
+        span {
+            width: 100%;
+            margin-top: 3px;
+            text-align: center;
+        }
+    }
+
+    .item {
+        width: 55px;
+        border: 2px solid transparent;
+    }
+
+    .no-outline {
+        border: 2px #999 solid;
+        border-radius: 30px;
+        text-align: center;
+        line-height: 52px;
+
+        span {
+            line-height: 20px;
+            margin-top: 2px;
+            position: absolute;
+            width: 100%;
+            margin-top: 7px !important;
+            text-align: center;
+        }
+    }
+}

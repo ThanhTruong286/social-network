@@ -1,6 +1,6 @@
 import "../assets/scss/components/FollowUser.scss";
 import { Swiper, SwiperSlide } from 'swiper/react';
-import "../assets/scss/components/UserStory.scss";
+import "../assets/scss/components/UserStoryHomePage.scss";
 import 'swiper/css';
 import React from 'react';
 import story1 from '../assets/images/story.jpg';
