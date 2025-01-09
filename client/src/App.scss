@@ -23,6 +23,10 @@ body {
     /* Cải thiện độ rõ */
 }
 
+.bg-current {
+    background-color: $primary-color !important;
+}
+
 .bg-image-cover {
     background-size: cover;
 }
@@ -97,6 +101,10 @@ body {
 
 .bg-whatsup {
     background-color: #25d366 !important;
+}
+
+.bg-image-center {
+    background-position: center center;
 }
 
 .badge-primary {
@@ -184,8 +192,16 @@ body {
     line-height: 1 !important;
 }
 
+.lh-24 {
+    line-height: 24px !important;
+}
+
 .lh-28 {
     line-height: 28px;
+}
+
+.ls-3 {
+    letter-spacing: 1px;
 }
 
 .w20 {
@@ -206,6 +222,10 @@ body {
 
 .w65 {
     width: 65px !important;
+}
+
+.w75 {
+    width: 75px !important;
 }
 
 .w90 {
@@ -306,4 +326,12 @@ body {
 
 .shadow-xss {
     box-shadow: 0 8px 30px rgba(0, 0, 0, .05) !important;
+}
+
+.text-left {
+    text-align: left !important;
+}
+
+.pl-10 {
+    padding-left: 100px !important;
 }

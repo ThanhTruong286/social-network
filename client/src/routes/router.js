@@ -15,6 +15,7 @@ import FriendListPage from '../pages/FriendListPage';
 import BagdePage from '../pages/BagdePage';
 import ExploreStoryPage from '../pages/ExploreStoryPage';
 import ExploreVideoPost from '../pages/ExploreVideoPost';
+import ExploreGroup from '../pages/ExploreGroup';
 
 const Router = () => {
     return (
@@ -69,6 +70,15 @@ const Router = () => {
                 element={
                     <MainLayout>
                         <ExploreVideoPost />
+                    </MainLayout>
+                }
+            />
+
+            <Route
+                path='/explore-groups'
+                element={
+                    <MainLayout>
+                        <ExploreGroup />
                     </MainLayout>
                 }
             />
