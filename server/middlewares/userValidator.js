@@ -22,7 +22,12 @@ const userValidator = [
 const validate = (req, res, next) => {
     const errors = validationResult(req);
     if (!errors.isEmpty()) {
-        return res.status(400).json({ errors: errors.array() });
+        const errorMessages = errors.array().map(error => ({
+            msg: error.msg,  // Thông điệp lỗi
+            param: error.param // Tên trường lỗi
+        }));
+        // Gửi lại mã trạng thái 400 và thông điệp lỗi
+        return res.status(400).json({ errors: errorMessages });
     }
     next();
 };

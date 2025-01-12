@@ -7,6 +7,7 @@
     "@fortawesome/free-solid-svg-icons": "^6.7.2",
     "@fortawesome/react-fontawesome": "^0.2.2",
     "@popperjs/core": "^2.11.8",
+    "axios": "^1.7.9",
     "bootstrap": "^5.3.3",
     "cra-template": "1.2.0",
     "font-awesome": "^4.7.0",
@@ -15,6 +16,7 @@
     "react-router-dom": "^7.0.2",
     "react-scripts": "5.0.1",
     "scss": "^0.2.4",
+    "sweetalert2": "^11.15.10",
     "swiper": "^11.1.15",
     "web-vitals": "^4.2.4"
   },
