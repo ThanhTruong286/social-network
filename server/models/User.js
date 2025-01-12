@@ -54,14 +54,14 @@ class User {
     async save() {
         try {
             const query = `
-                INSERT INTO users 
-                (username, password, email, phone_number, profile_image, is_active, is_verified, verification_token, 
-                password_reset_token, password_reset_expires, two_factor_enabled, two_factor_secret, 
-                failed_login_attempts, lockout_until, last_login_at, created_at, updated_at, ip_address, device_info) 
-                VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, NOW(), NOW(), ?, ?)
-            `;
-            const values = this.toValuesArray();
-            const [result] = await db.query(query, values);
+            INSERT INTO users 
+            (username, password, email, phone_number, profile_image, is_active, is_verified, verification_token, 
+            password_reset_token, password_reset_expires, two_factor_enabled, two_factor_secret, 
+            failed_login_attempts, lockout_until, last_login_at, created_at, updated_at, ip_address, device_info) 
+            VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, NOW(), NOW(), ?, ?)
+        `;
+            const values = this.toValuesArray(); // Trả về đúng số lượng giá trị
+            const [result] = await db.query(query, [...values, this.ip_address, this.device_info]);
             this.user_id = result.insertId; // Gán ID mới sau khi tạo
             return this.user_id;
         } catch (error) {

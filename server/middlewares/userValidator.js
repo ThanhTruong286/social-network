@@ -10,23 +10,15 @@ const userValidator = [
     body('password')
         .notEmpty().withMessage('Mật khẩu không được để trống.')
         .isLength({ min: 6 }).withMessage('Mật khẩu phải có ít nhất 6 ký tự.'),
-    body('confirmPassword')
-        .custom((value, { req }) => {
-            if (value !== req.body.password) {
-                throw new Error('Mật khẩu và xác nhận mật khẩu không khớp.');
-            }
-            return true;
-        }),
 ];
 
 const validate = (req, res, next) => {
     const errors = validationResult(req);
     if (!errors.isEmpty()) {
         const errorMessages = errors.array().map(error => ({
-            msg: error.msg,  // Thông điệp lỗi
-            param: error.param // Tên trường lỗi
+            msg: error.msg,
+            param: error.param
         }));
-        // Gửi lại mã trạng thái 400 và thông điệp lỗi
         return res.status(400).json({ errors: errorMessages });
     }
     next();

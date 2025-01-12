@@ -6,7 +6,7 @@ const authService = {
     async register({ username, email, password, confirmPassword }) {
         // Kiểm tra mật khẩu xác nhận
         if (password !== confirmPassword) {
-            const error = new Error('Mật khẩu xác nhận không khớp.');
+            const error = new Error('Mật khẩu và xác nhận mật khẩu không khớp.');
             error.status = 400;
             throw error;
         }
@@ -14,7 +14,7 @@ const authService = {
         // Kiểm tra username đã tồn tại
         const existingUsername = await User.findByUsername(username);
         if (existingUsername) {
-            const error = new Error('Username đã tồn tại.');
+            const error = new Error('Tên người dùng đã tồn tại.');
             error.status = 400;
             throw error;
         }
