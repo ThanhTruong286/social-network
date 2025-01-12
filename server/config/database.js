@@ -9,12 +9,13 @@ const pool = mysql.createPool({
     port: process.env.DB_PORT || 3306,
 });
 
-const db = pool.promise(); // Sử dụng Promise để thuận tiện với async/await
+// Sử dụng Promise để thuận tiện với async/await
+const db = pool.promise();
 
 async function checkDatabaseConnection() {
     try {
         // Thực hiện truy vấn đơn giản để kiểm tra kết nối
-        await db.query('SELECT 1'); // Truy vấn đơn giản, không yêu cầu tên cơ sở dữ liệu
+        await db.query('SELECT 1');
         console.log('Kết nối tới cơ sở dữ liệu thành công!');
     } catch (error) {
         console.error('Không thể kết nối tới cơ sở dữ liệu:', error.message);
@@ -22,3 +23,6 @@ async function checkDatabaseConnection() {
 }
 
 checkDatabaseConnection();
+
+// Xuất đối tượng db để sử dụng trong các tệp khác
+module.exports = db;
