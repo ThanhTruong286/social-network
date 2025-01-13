@@ -1,6 +1,6 @@
 const jwt = require('jsonwebtoken');
 
-const authMiddleware = (req, res, next) => {
+const checkAuth = (req, res, next) => {
     const token = req.headers['authorization']?.split(' ')[1]; // Lấy token từ header
     if (!token) {
         return res.status(403).json({ message: 'Không có token, quyền truy cập bị từ chối.' });
@@ -15,4 +15,4 @@ const authMiddleware = (req, res, next) => {
     });
 };
 
-module.exports = authMiddleware;
+module.exports = checkAuth;

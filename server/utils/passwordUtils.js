@@ -25,7 +25,18 @@ const verifyPassword = async (password, hashedPassword) => {
     return await bcrypt.compare(password, hashedPassword);
 };
 
+/**
+ * Hàm kiểm tra độ mạnh mật khẩu
+ * @param {string} password - Mật khẩu người dùng đăng nhập 
+ * @returns - trả về true nếu mật khẩu đủ mạnh, ngược lại false
+ */
+const isPasswordStrong = (password) => {
+    const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{6,}$/;
+    return passwordRegex.test(password);
+};
+
 module.exports = {
     hashPassword,
     verifyPassword,
+    isPasswordStrong
 };

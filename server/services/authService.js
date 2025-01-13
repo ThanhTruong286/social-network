@@ -1,9 +1,17 @@
 const jwt = require('jsonwebtoken');
 const User = require('../models/User');
-const { hashPassword, verifyPassword } = require('../utils/passwordUtils');
+const { hashPassword, verifyPassword, isPasswordStrong } = require('../utils/passwordUtils');
 
 const authService = {
+
     async register({ username, email, password, confirmPassword }) {
+        // Kiểm tra tính mạnh của mật khẩu
+        if (!isPasswordStrong(password)) {
+            const error = new Error('Mật khẩu phải chứa ít nhất 6 ký tự, bao gồm chữ hoa, chữ thường, số và ký tự đặc biệt.');
+            error.status = 400;
+            throw error;
+        }
+
         // Kiểm tra mật khẩu xác nhận
         if (password !== confirmPassword) {
             const error = new Error('Mật khẩu và xác nhận mật khẩu không khớp.');
@@ -40,6 +48,7 @@ const authService = {
         // Lưu người dùng mới vào cơ sở dữ liệu
         const userId = await newUser.save();
 
+        // Trả về thông điệp thành công
         return {
             message: 'Người dùng được tạo thành công.',
             user: { id: userId, username, email },

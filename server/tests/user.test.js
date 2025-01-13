@@ -9,26 +9,26 @@ describe('User Model', () => {
         // Tạo bảng users nếu nó chưa tồn tại
         await db.query(`
         CREATE TABLE IF NOT EXISTS users (
-            user_id INT AUTO_INCREMENT PRIMARY KEY, // ID người dùng tự động tăng
-            username VARCHAR(255) UNIQUE, // Tên người dùng phải là duy nhất
-            email VARCHAR(255) UNIQUE, // Email phải là duy nhất
-            password VARCHAR(255), // Mật khẩu người dùng
-            phone_number VARCHAR(255), // Số điện thoại (nếu cần)
-            profile_image VARCHAR(255), // Hình ảnh đại diện (nếu cần)
-            is_active TINYINT, // Trạng thái hoạt động (1 hoặc 0)
-            is_verified TINYINT, // Trạng thái xác minh (1 hoặc 0)
-            verification_token VARCHAR(255), // Token xác minh
-            password_reset_token VARCHAR(255), // Token đặt lại mật khẩu
-            password_reset_expires DATETIME, // Thời gian hết hạn đặt lại mật khẩu
-            two_factor_enabled TINYINT, // Trạng thái xác thực hai yếu tố (1 hoặc 0)
-            two_factor_secret VARCHAR(255), // Mã bí mật xác thực hai yếu tố
-            failed_login_attempts INT, // Số lần đăng nhập thất bại
-            lockout_until DATETIME, // Thời gian khóa tài khoản (nếu có)
-            last_login_at DATETIME, // Thời gian đăng nhập lần cuối
-            created_at DATETIME DEFAULT CURRENT_TIMESTAMP, // Thời gian tạo bản ghi
-            updated_at DATETIME DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP, // Thời gian cập nhật bản ghi
-            ip_address VARCHAR(255), // Địa chỉ IP người dùng
-            device_info VARCHAR(255) // Thông tin thiết bị
+            user_id INT AUTO_INCREMENT PRIMARY KEY,
+            username VARCHAR(255) UNIQUE,
+            email VARCHAR(255) UNIQUE,
+            password VARCHAR(255),
+            phone_number VARCHAR(255),
+            profile_image VARCHAR(255),
+            is_active TINYINT,
+            is_verified TINYINT,
+            verification_token VARCHAR(255),
+            password_reset_token VARCHAR(255),
+            password_reset_expires DATETIME,
+            two_factor_enabled TINYINT,
+            two_factor_secret VARCHAR(255),
+            failed_login_attempts INT,
+            lockout_until DATETIME,
+            last_login_at DATETIME,
+            created_at DATETIME DEFAULT CURRENT_TIMESTAMP,
+            updated_at DATETIME DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+            ip_address VARCHAR(255),
+            device_info VARCHAR(255)
         )
         `);
     });

@@ -1,6 +1,7 @@
 import React from 'react';
 import "../assets/scss/pages/LoginPage.scss";
 import "../App.scss";
+import LoginForm from '../components/LoginForm';
 
 const LoginPage = () => {
     return (
@@ -13,28 +14,9 @@ const LoginPage = () => {
                     <h2>
                         Login into your account
                     </h2>
-                    <form>
-                        <div class="mb-3">
-                            <input class="form-control" id="email" placeholder="Your Email Address" type="email" />
-                        </div>
-                        <div class="mb-3">
-                            <input class="form-control" id="password" placeholder="Password" type="password" />
-                        </div>
 
-                        <div class="mb-3 form-check">
-                            <input class="form-check-input" id="rememberMe" type="checkbox" />
-                            <label class="form-check-label" for="rememberMe">
-                                Remember me
-                            </label>
-                            <a class="forgot-password-link" href="#">
-                                Forgot your Password?
-                            </a>
-                        </div>
+                    <LoginForm />
 
-                        <button class="btn btn-primary w-100" type="submit">
-                            Login
-                        </button>
-                    </form>
                     <div class="register-link">
                         <p>
                             Dont have account

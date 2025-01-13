@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { registerUser } from '../services/api';
-import { validateUserData } from '../utils/authUtils';
-import { showAlert } from '../utils/authUtils'; // Nhập showAlert nếu cần
+import { validateUserData, showAlert } from '../utils/authUtils';
 
 const RegisterForm = () => {
     const [name, setName] = useState('');
@@ -39,12 +38,10 @@ const RegisterForm = () => {
         try {
             const result = await registerUser(userData);
             showAlert('success', 'Thành công!', result.message);
-            // Reset form nếu cần
-            setName('');
-            setEmail('');
-            setPassword('');
-            setConfirmPassword('');
-            setAcceptTerm(false);
+            // Thêm thời gian chờ 2 giây trước khi chuyển hướng
+            setTimeout(() => {
+                window.location.href = '/login';
+            }, 2000); // 2000 milliseconds = 2 seconds
         } catch (error) {
             showAlert('error', 'Lỗi', error.message || 'Đã xảy ra lỗi!');
         }
