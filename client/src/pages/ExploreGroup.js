@@ -4,9 +4,9 @@ const ExploreGroup = () => {
     return (
         <div className='main-content right-chat-active'>
             <div className='middle-sidebar-bottom'>
-                <div class="middle-sidebar-left pe-0">
+                <div className="middle-sidebar-left pe-0">
                     <div className="group-list">
-                        <div class="row">
+                        <div className="row">
                             <GroupList />
                         </div>
                     </div>

@@ -12,8 +12,12 @@ import UserLiveStream from '../components/UserLiveStream';
 import UserVideoPost from '../components/UserVideoPost';
 import FollowUser from '../components/FollowUser';
 import PostLoading from '../components/PostLoading';
+import useAuthCheck from '../hooks/useAuthCheck';
 
 const HomePage = () => {
+
+    useAuthCheck();
+
     return (
         <div className='main-content right-chat-active'>
             <div className='middle-sidebar-bottom'>

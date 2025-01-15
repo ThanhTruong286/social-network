@@ -6,6 +6,7 @@ import { AuthContext } from '../contexts/AuthContext';
 const LoginForm = () => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
+    const { login } = useContext(AuthContext);
 
     const handleSubmit = async (e) => {
         e.preventDefault(); // Ngăn chặn hành vi mặc định của form
@@ -27,6 +28,11 @@ const LoginForm = () => {
 
         try {
             const result = await loginUser(userData); // Gọi API để đăng nhập
+
+            if (result.token) {
+                login(result.token); // Lưu token vào AuthContext
+            }
+
             showAlert('success', 'Thành công!', result.message);
             setTimeout(() => {
                 window.location.href = '/'; // Chuyển hướng đến trang chính
@@ -38,9 +44,9 @@ const LoginForm = () => {
 
     return (
         <form onSubmit={handleSubmit}>
-            <div class="mb-3">
+            <div className="mb-3">
                 <input
-                    class="form-control"
+                    className="form-control"
                     id="email"
                     placeholder="Your Email Address"
                     type="email"
@@ -49,9 +55,9 @@ const LoginForm = () => {
 
                 />
             </div>
-            <div class="mb-3">
+            <div className="mb-3">
                 <input
-                    class="form-control"
+                    className="form-control"
                     id="password"
                     placeholder="Password"
                     type="password"
@@ -60,17 +66,17 @@ const LoginForm = () => {
                 />
             </div>
 
-            <div class="mb-3 form-check">
-                <input class="form-check-input" id="rememberMe" type="checkbox" />
-                <label class="form-check-label" for="rememberMe">
+            <div className="mb-3 form-check">
+                <input className="form-check-input" id="rememberMe" type="checkbox" />
+                <label className="form-check-label" htmlFor="rememberMe">
                     Remember me
                 </label>
-                <a class="forgot-password-link" href="#">
+                <a className="forgot-password-link" href="#">
                     Forgot your Password?
                 </a>
             </div>
 
-            <button class="btn btn-primary w-100" type="submit">
+            <button className="btn btn-primary w-100" type="submit">
                 Login
             </button>
         </form>
